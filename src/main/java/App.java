@@ -112,7 +112,7 @@
          File fout = new File(outfilename);
  
          int startindx, endindx;
-         startindx = 3; endindx = 10;
+         startindx = 0; endindx = 500;
          int count = 0;
          try{
              while(true){
@@ -120,6 +120,7 @@
                 BufferedWriter bw = new BufferedWriter(fw);
         
                  count++;
+                System.out.println(count);
  
                  String s = br.readLine();
                  if(s==null){    break; }
