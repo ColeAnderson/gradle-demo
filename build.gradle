@@ -24,7 +24,7 @@ dependencies {
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
     // https://mvnrepository.com/artifact/postgresql/postgresql
-    implementation group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
+    //implementation group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
 
 }
 

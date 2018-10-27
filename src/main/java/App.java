@@ -71,14 +71,26 @@
                  fst  = "/l/?kh=-1&uddg=https%3A%2F%2F";
                  lst = "%2F";
                  s = title.attr("href");
+                 if(
+                     s.contains("facebook") ||
+                     s.contains("linkedin") ||
+                     s.contains("youtube") 
+                 ){
+                    ret = s;
+                    return ret;
+                 }
                  // s = s.substring(29,s.length()-3);
                  String[] subs = s.split("%2F");
                  for(String w:subs){
-                     if (w.contains("facebook") ||
+                     if (
+                         w.contains("companycheck") ||
                          w.contains("beta.companieshouse.gov.uk") ||
-                         w.contains("www.linkedin.com")   ||
+                         w.contains("endole")   ||
                          w.contains("www.checkdirector.co.uk") ||
-                         w.contains("wikipedia")
+                         w.contains("wikipedia") ||
+                         w.contains("globaldatabase") 
+                         || w.contains("bizdb")
+                         || w.contains("companiesintheuk")
                       ){ break; }
                      if(w.contains(".com") || w.contains(".co.uk")){
                          s = w;
@@ -112,7 +124,7 @@
          File fout = new File(outfilename);
  
          int startindx, endindx;
-         startindx = 0; endindx = 500;
+         startindx = 0; endindx = 3000;
          int count = 0;
          try{
              while(true){
